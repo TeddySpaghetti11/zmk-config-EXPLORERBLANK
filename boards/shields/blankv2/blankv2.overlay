@@ -6,21 +6,23 @@
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
 
+        diode-direction = "col2row";
+
         col-gpios
-            = <&gpio0 2 GPIO_ACTIVE_LOW>   // col0, pin 18
-            , <&gpio1 15 GPIO_ACTIVE_LOW>  // col1, pin 17
-            , <&gpio1 13 GPIO_ACTIVE_LOW>  // col2, pin 16
-            , <&gpio1 11 GPIO_ACTIVE_LOW>  // col3, pin 15
-            , <&gpio0 10 GPIO_ACTIVE_LOW>  // col4, pin 14
-            , <&gpio0 9 GPIO_ACTIVE_LOW>   // col5, pin 13
+            = <&gpio0 2 GPIO_ACTIVE_LOW>   // col0
+            , <&gpio1 15 GPIO_ACTIVE_LOW>  // col1
+            , <&gpio1 13 GPIO_ACTIVE_LOW>  // col2
+            , <&gpio1 11 GPIO_ACTIVE_LOW>  // col3
+            , <&gpio0 10 GPIO_ACTIVE_LOW>  // col4
+            , <&gpio0 9 GPIO_ACTIVE_LOW>   // col5
             ;
             
         row-gpios
-            = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // row0, pin 8
-            , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>   // row1, pin 12
-            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // row2, pin 11
-            , <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>   // row3, pin 10
-            , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>   // row4, pin 9
+            = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // row0
+            , <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // row1
+            , <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // row2
+            , <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // row3
+            , <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // row4
             ;
 
     };
