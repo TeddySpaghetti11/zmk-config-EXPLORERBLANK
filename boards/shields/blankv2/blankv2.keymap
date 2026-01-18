@@ -1,11 +1,13 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-/ {
+
+/ {  
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base_layer {
+            display-name = "Base";
             bindings = <
                 /* Row 0 */
                 &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y
@@ -24,4 +26,4 @@
             >;
         };
     };
-};
+ };
