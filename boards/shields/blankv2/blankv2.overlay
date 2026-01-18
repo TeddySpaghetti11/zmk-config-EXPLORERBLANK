@@ -9,12 +9,12 @@
         diode-direction = "col2row";
 
         col-gpios
-            = <&gpio0 2 GPIO_ACTIVE_LOW>   // col0
-            , <&gpio1 15 GPIO_ACTIVE_LOW>  // col1
-            , <&gpio1 13 GPIO_ACTIVE_LOW>  // col2
-            , <&gpio1 11 GPIO_ACTIVE_LOW>  // col3
-            , <&gpio0 10 GPIO_ACTIVE_LOW>  // col4
-            , <&gpio0 9 GPIO_ACTIVE_LOW>   // col5
+            = <&gpio0 9 GPIO_ACTIVE_LOW>   // col5 → now position 0
+            , <&gpio0 10 GPIO_ACTIVE_LOW>  // col4 → now position 1
+            , <&gpio1 11 GPIO_ACTIVE_LOW>  // col3 → now position 2
+            , <&gpio1 13 GPIO_ACTIVE_LOW>  // col2 → now position 3
+            , <&gpio1 15 GPIO_ACTIVE_LOW>  // col1 → now position 4
+            , <&gpio0 2 GPIO_ACTIVE_LOW>   // col0 → now position 5
             ;
             
         row-gpios
