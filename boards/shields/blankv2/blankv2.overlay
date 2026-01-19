@@ -7,20 +7,20 @@
         diode-direction = "col2row";
 
         row-gpios
-            = <&gpio0 9 GPIO_ACTIVE_LOW>   // col5 → now position 0
-            , <&gpio0 10 GPIO_ACTIVE_LOW>  // col4 → now position 1
-            , <&gpio1 11 GPIO_ACTIVE_LOW>  // col3 → now position 2
-            , <&gpio1 13 GPIO_ACTIVE_LOW>  // col2 → now position 3
-            , <&gpio1 15 GPIO_ACTIVE_LOW>  // col1 → now position 4
-            , <&gpio0 2 GPIO_ACTIVE_LOW>   // col0 → now position 5
+            = <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // labeled col5, electrically row0
+            , <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // labeled col4, electrically row1
+            , <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // labeled col3, electrically row2
+            , <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // labeled col2, electrically row3
+            , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // labeled col1, electrically row4
+            , <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // labeled col0, electrically row5
             ;
             
         col-gpios
-            = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // row0
-            , <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // row1
-            , <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // row2
-            , <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // row3
-            , <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // row4
+            = <&gpio0 24 GPIO_ACTIVE_LOW>  // labeled row0, electrically col0
+            , <&gpio1 0 GPIO_ACTIVE_LOW>   // labeled row1, electrically col1
+            , <&gpio0 11 GPIO_ACTIVE_LOW>  // labeled row2, electrically col2
+            , <&gpio1 4 GPIO_ACTIVE_LOW>   // labeled row3, electrically col3
+            , <&gpio1 6 GPIO_ACTIVE_LOW>   // labeled row4, electrically col4
             ;
 
     };
