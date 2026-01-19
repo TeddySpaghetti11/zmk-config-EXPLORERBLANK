@@ -41,13 +41,15 @@
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         transform = <&default_transform>;
-        // Example: 6 columns x 5 rows grid, positions in millimeters
-        key-positions = <0 0>, <19 0>, <38 0>, <57 0>, <76 0>, <95 0>,
-                       <0 19>, <19 19>, <38 19>, <57 19>, <76 19>, <95 19>,
-                       <0 38>, <19 38>, <38 38>, <57 38>, <76 38>, <95 38>,
-                       <0 57>, <19 57>, <38 57>, <57 57>, <76 57>, <95 57>,
-                       <0 76>, <19 76>, <38 76>, <57 76>, <76 76>, <95 76>;
-        // Adjust these positions to match your actual key layout if needed
+        // Each key: <&key_physical_attrs width height x y rotation rx ry>
+        // Example: 6 columns x 5 rows, 19mm spacing, 19mm key size, no rotation
+        keys =
+            <&key_physical_attrs 19 19 0 0 0 0 0>,    <&key_physical_attrs 19 19 19 0 0 0 0>,    <&key_physical_attrs 19 19 38 0 0 0 0>,    <&key_physical_attrs 19 19 57 0 0 0 0>,    <&key_physical_attrs 19 19 76 0 0 0 0>,    <&key_physical_attrs 19 19 95 0 0 0 0>,
+            <&key_physical_attrs 19 19 0 19 0 0 0>,   <&key_physical_attrs 19 19 19 19 0 0 0>,   <&key_physical_attrs 19 19 38 19 0 0 0>,   <&key_physical_attrs 19 19 57 19 0 0 0>,   <&key_physical_attrs 19 19 76 19 0 0 0>,   <&key_physical_attrs 19 19 95 19 0 0 0>,
+            <&key_physical_attrs 19 19 0 38 0 0 0>,   <&key_physical_attrs 19 19 19 38 0 0 0>,   <&key_physical_attrs 19 19 38 38 0 0 0>,   <&key_physical_attrs 19 19 57 38 0 0 0>,   <&key_physical_attrs 19 19 76 38 0 0 0>,   <&key_physical_attrs 19 19 95 38 0 0 0>,
+            <&key_physical_attrs 19 19 0 57 0 0 0>,   <&key_physical_attrs 19 19 19 57 0 0 0>,   <&key_physical_attrs 19 19 38 57 0 0 0>,   <&key_physical_attrs 19 19 57 57 0 0 0>,   <&key_physical_attrs 19 19 76 57 0 0 0>,   <&key_physical_attrs 19 19 95 57 0 0 0>,
+            <&key_physical_attrs 19 19 0 76 0 0 0>,   <&key_physical_attrs 19 19 19 76 0 0 0>,   <&key_physical_attrs 19 19 38 76 0 0 0>,   <&key_physical_attrs 19 19 57 76 0 0 0>,   <&key_physical_attrs 19 19 76 76 0 0 0>,   <&key_physical_attrs 19 19 95 76 0 0 0>;
+        // Adjust these values to match your actual key layout if needed
     };
     
     chosen {
